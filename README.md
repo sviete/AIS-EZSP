@@ -47,5 +47,30 @@ VTref | VCC
 SWDIO | SWO
 SWCLK | SWK
 
+![](https://github.com/sviete/AIS-EZSP/raw/main/jtag.jpg)
+
 
 Simplicity Commander - connection to Ebyte via Jlink:
+
+![](https://github.com/sviete/AIS-EZSP/raw/main/E180-ZG120B-TB/1.png)
+
+### Flash bootloader
+
+In Simplicity Commander flash file ``BTL_STD_MG1B232_TX-PA0_RX-PA1_BT-PB11-combined.s3``
+
+### Flash gbl
+
+This can be done in Simplicity Commander, file ``NCP_UHW_MG1B232_678_PA0-PA1-PB11_PA5-PA4.gbl``
+of (since you have bootloader) via USB and Elelabs_EzspFwUtility
+
+commands:
+
+```
+python Elelabs_EzspFwUtility.py probe -p /dev/ttyUSB0
+```
+
+```
+python Elelabs_EzspFwUtility.py flash -f NCP_UHW_MG1B232_678_PA0-PA1-PB11_PA5-PA4.gbl -p /dev/ttyUSB0
+```
+
+Done!
