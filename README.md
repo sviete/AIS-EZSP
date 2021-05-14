@@ -60,17 +60,19 @@ In Simplicity Commander flash file ``BTL_STD_MG1B232_TX-PA0_RX-PA1_BT-PB11-combi
 
 ### Flash gbl
 
+Get the firmware: https://github.com/zha-ng/EZSP-Firmware/tree/master/EByte-E180-Z120B
+
 This can be done in Simplicity Commander, file ``NCP_UHW_MG1B232_678_PA0-PA1-PB11_PA5-PA4.gbl``
 of (since you have bootloader) via USB and Elelabs_EzspFwUtility
 
 commands:
 
 ```
-python Elelabs_EzspFwUtility.py probe -p /dev/ttyUSB0
+python3 Elelabs_EzspFwUtility.py probe -p /dev/ttyUSB0
 ```
 
 ```
-python Elelabs_EzspFwUtility.py flash -f NCP_UHW_MG1B232_678_PA0-PA1-PB11_PA5-PA4.gbl -p /dev/ttyUSB0
+python3 Elelabs_EzspFwUtility.py flash -f NCP_UHW_MG1B232_678_PA0-PA1-PB11_PA5-PA4.gbl -p /dev/ttyUSB0
 ```
 
 Done!
